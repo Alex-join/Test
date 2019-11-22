@@ -11,13 +11,13 @@ layout: body
 <!--分页-->
 <div class="text-center">
 	{% if page.previous %}
-	<a class="btn btn-primary text-left" href="{{page.previous.url}}">上一篇： {{page.previous.title}}</a>
+	<a class="btn btn-primary text-left" href="{{site.baseurl}}{{page.previous.url}}">上一篇： {{page.previous.title}}</a>
 		{% else %}
 	<a class="btn btn-primary text-left" disabled>没有内容了~</a>
 	{% endif %}
-	<a class="btn btn-primary text-left" href="index.html">返回首页</a>
+	<a class="btn btn-primary text-left" href="{{site.baseurl}}/index.html">返回首页</a>
 	{% if page.next %}
-	<a class="btn btn-primary text-right" href="{{page.next.url}}">下一篇： {{page.next.title}}</a>
+	<a class="btn btn-primary text-right" href="{{site.baseurl}}{{page.next.url}}">下一篇： {{page.next.title}}</a>
 		{% else %}
 	<a class="btn btn-primary text-left" disabled>没有内容了~</a>
 	{% endif %}
