@@ -1,0 +1,32 @@
+---
+layout: body
+title: 科学家的成果是全人类的财产，而科学是最无私的领域。
+title_author: 高尔基
+---
+
+{% for post in paginator.posts %}
+	<div class="panel panel-default">
+		<div class="panel-heading">{{post.type}}</div>
+	  	<div class="panel-body content-right-body">
+		  	<a href="{{ post.url }}">{{ post.contents }}</a> 
+		</div>
+	  	<div class="panel-footer content-right-footer">{{ post.author }}写于{{ post.date | %Y-%m-%d}}</div>
+	</div>
+{% endfor %}
+
+<!--分页-->
+<div class="text-center">
+	{% if paginator.previous_page_path %}
+		<a class="btn btn-primary text-left" href="{{paginator.previous_page_path}}">上一页</a>
+		{% else %}
+		<a class="btn btn-primary text-left" href="index.html">返回首页</a>
+	{% endif %}
+	<a class="btn btn-primary text-center">当前位置：{{paginator.page}}/{{paginator.total_pages}}页</a>
+	{% if paginator.next_page_path %}
+		<a class="btn btn-primary text-right" href="{{paginator.next_page_path}}">下一页</a>
+		{% else %}
+		<a class="btn btn-primary text-right" href="{{ site.baseurl }}index.html">返回首页</a>
+	{% endif %}
+</div>
+<!--分页-->
+
