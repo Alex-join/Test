@@ -1,4 +1,0 @@
----
-layout: content
-author: Alex
----
