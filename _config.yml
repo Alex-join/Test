@@ -1,5 +1,4 @@
-baseurl: /
-author: Alex
-#分页
-paginate: 3
+baseurl: / |
+author: Alex |
+paginate: 3 |
 plugins: [jekyll-paginate]
